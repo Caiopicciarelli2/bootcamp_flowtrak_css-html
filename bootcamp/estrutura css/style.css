@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --color-elementoPAI: rgba(0, 0, 255, 0.5);
+    --color-elementoFILHO: rgba(255, 0, 0, 0.5);
+    --color-elementoFILHOdoFILHO: rgba(255, 255, 0, 0.5);
+    --font-principal: "Roboto", sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-principal);
+}
+
+/*HEADER*/
+
+.navbar{
+    display: flex; /*Deixa os elementos flexiveis, ou seja, fica mais fácil para manipular*/
+    justify-content: center; /*Alinha os elementos horizontalmente*/
+    align-items: center; /*Alinha os elementos Verticalmente*/
+    height: 10vh; /*tamanho altura*/
+    width: 100%; /*tamanho largura*/
+    background-color: var(--color-elementoPAI); /*cor de fundo*/
+    border-bottom: 2px solid rgba(0, 0, 0, 0.267); /*borda preta na parte de baixo*/
+} 
+
+.navbar ul{
+    display: flex; /*Deixa os elementos flexiveis, ou seja, fica mais fácil para manipular*/
+    justify-content: space-evenly; /*espaça um pouco os elementos*/
+    align-items: center; /*Alinha os elementos Verticalmente*/
+    height: 80%; /*tamanho altura*/
+    width: 30%; /*tamanho largura*/
+    background-color: var(--color-elementoFILHO); /*cor de fundo*/
+    border: 1px solid black; /*borda preta*/
+    border-radius: 10px; /*borda arredondada*/
+
+    list-style: none; /*tira as bolinhas pretas padrões*/
+}
+
+.navbar ul li{
+    color: var(--color-elementoFILHOdoFILHO); /*cor do texto*/
+    font-weight: 600; /*grosurra da fonte*/
+
+    cursor: pointer; /*passa o cursor e fica clicavel*/
+    transition: 0.3s; /* tempo de transição*/
+}
+
+.navbar ul li:hover{
+    color: white; /*cor do texto*/
+}
+
+/*MAIN*/
+
+.container{
+    display: flex; /*Deixa os elementos flexiveis, ou seja, fica mais fácil para manipular*/
+    justify-content: center; /*Alinha os elementos horizontalmente*/
+    align-items: center; /*Alinha os elementos Verticalmente*/
+    flex-direction: column; /*IMPORTANTE*/
+    height: 80vh; /*tamanho altura*/
+    width: 100%; /*tamanho largura*/
+    background-color: blue;
+    border-bottom: 2px solid black; /*borda preta na parte de baixo*/
+}
+
+/*Quando tem flex-direction: column, o justify e o align items trocam de função
+ou seja, justify alinha verticalmente, e align horizontalmente*/
+
+.container-title{
+    display: flex; /*Deixa os elementos flexiveis, ou seja, fica mais fácil para manipular*/
+    justify-content: center; /*Alinha os elementos horizontalmente*/
+    align-items: center; /*Alinha os elementos Verticalmente*/
+    height: 15%; /*tamanho altura*/
+    width: 90%; /*tamanho largura*/
+    border: 2px solid black; /*borda preta na parte de baixo*/
+}
+
+.content{
+    display: flex; /*Deixa os elementos flexiveis, ou seja, fica mais fácil para manipular*/
+    justify-content: space-evenly; /*Alinha os elementos horizontalmente*/
+    align-items: center; /*Alinha os elementos Verticalmente*/
+    height: 80%; /*tamanho altura*/
+    width: 90%; /*tamanho largura*/
+    border: 2px solid black; /*borda preta na parte de baixo*/
+}
+
+.content-left, .content-right{
+    display: flex; /*Deixa os elementos flexiveis, ou seja, fica mais fácil para manipular*/
+    justify-content: space-evenly; /*Alinha os elementos horizontalmente*/
+    align-items: center; /*Alinha os elementos Verticalmente*/
+    height: 80%; /*tamanho altura*/
+    width: 45%; /*tamanho largura*/
+    background-color: var(--color-elementoFILHOdoFILHO); /*cor de fundo*/
+    border: 2px solid black; /*borda preta na parte de baixo*/
+}

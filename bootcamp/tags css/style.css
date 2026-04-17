@@ -1,0 +1,174 @@
+/*
+    Comentário
+*/
+
+/*
+imports fonts - google fonts
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*
+    estabelecendo padrões
+*/
+
+:root{
+    --color-principal: #fff;
+    --color-secundaria: #000;
+    --font-principal: "Roboto", sans-serif;
+    --font-logo: "Roboto", sans-serif;
+}
+
+/*
+    todos
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-principal);
+    color: var(--color-secundaria);
+}
+
+/*
+    Sistemas de cor: rgba e #
+*/
+
+
+.container{
+    color: #aaaa;
+    color: rgba(100, 200, 120, 0.9); /*ultimo parametro é opacidade*/
+    color: rgba(160, 95, 95, 0.123);
+}
+
+/*
+    diferença de ID e CLASS
+*/
+
+.container{ /*class*/
+    
+}
+
+#container{ /*ID*/
+
+}
+
+.container h1{ /*referenciando elementos filhos a partir de elementos PAI, no caso TODOS os paragrafos de .container*/
+
+}
+
+.container .content{ /*.content DENTRO de .container*/
+
+}
+
+.container, .content, #content{ /*SEPARADO por virgula estiliza os mesmos parametros para as duas TAGS*/
+    background-color: #000;
+}
+
+.container{ /*HOVER, quando passa o mouse encima do container, vai ter X comportamento, lembrando que o TRANSITION é sempre no elemento PAI*/
+    color: yellow;
+    transition: 0.3s;
+}
+
+.container:hover{
+    color: white;
+}
+
+/*Tipos de tamanhos*/
+
+.container-teste{
+    height: 10px; /*Depende da resolução, (Pouco responsivo)*/
+    height: 1rem 1em; /*Os dois são bastante usados em Textos*/
+    height: 30vh; /*vh é um dos tipos de medida mais reponsivos, e atua junto com o vw*/
+    width: 30vw;
+    height: 100%; /*Baseado sempre no elemento pai, e a media mais responsiva*/
+    width: 100%; /*Se baseia no elemento pai, porém funciona nos elementos PAI também, diferente do height*/
+}
+
+/*Tags mais usadas*/
+
+.container{
+    /*estilos de organização dos elementos PAI e FILHOS*/
+    display: flex;
+    display: block;
+    display: none;
+
+    justify-content: center;
+    justify-content: flex-start;
+    justify-content: flex-end;
+
+    justify-content: space-between;
+    justify-content: space-around;
+    justify-content: space-evenly;
+
+    align-items: center;
+    align-items: left;
+    align-items: right;
+
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    /*estilo para bordas*/
+    border: 1px solid black;
+    border-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+    /*cores*/
+    background-color: black;
+    color: black;
+    
+    /*imagens*/
+    background-image: url();
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    /*como o elemento se comporta na tela*/
+    position: relative;
+    position: absolute;
+    z-index: 1000;
+
+    left: 10%;
+    top: 10%;
+    right: 10%;
+    bottom: 10%;
+
+    /*padding, margin etc*/
+
+    padding: 1rem 2rem; /*1rem = vertical (primeiro), 2rem = horizontal (segundo)*/
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    margin: 1rem 2rem;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    /*texto*/
+
+    font-size: 16px;
+    font-family: Arial;
+    font-weight: 100;
+    text-align: center;
+
+    /*interações hover*/
+
+    cursor: pointer;
+    transition: 0.3s;
+
+    /*largura e altura*/
+
+    width: 100%;
+    min-height: 100%;
+    max-width: 100%;
+
+    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
+}
